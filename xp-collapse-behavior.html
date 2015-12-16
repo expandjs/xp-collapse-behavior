@@ -215,7 +215,7 @@ A behavior used to add collapse capabilities on a custom element.
                 var height = -self.collapser.scrollHeight;
 
                 // Styling
-                if (!collapsing) { self.collapser.style.transition   = self.collapser.style.webkitTransition = 'margin 0s'; }
+                if (!collapsing) { self.collapser.style.transition   = 'margin 0s'; }
                 if (!collapsing) { self.collapser.style.marginTop    = backward ? (collapsed ? 0 : height + 'px') : ''; }
                 if (!collapsing) { self.collapser.style.marginBottom = backward ? '' : (collapsed ? 0 : height + 'px'); }
 
@@ -223,7 +223,7 @@ A behavior used to add collapse capabilities on a custom element.
                 requestAnimationFrame(function () {
 
                     // Styling
-                    self.collapser.style.transition   = self.collapser.style.webkitTransition = 'margin ' + (duration / 1000) + 's ' + easing;
+                    self.collapser.style.transition   = 'margin ' + (duration / 1000) + 's ' + easing;
                     self.collapser.style.marginTop    = backward ? (collapsed ? height + 'px' : 0) : '';
                     self.collapser.style.marginBottom = backward ? '' : (collapsed ? height + 'px' : 0);
 
